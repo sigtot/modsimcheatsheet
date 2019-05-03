@@ -73,6 +73,25 @@
 %------------ Simple rotations header ---------------------
 \node[fancytitle, right=10pt] at (box.north west) {Simple Rotations};
 \end{tikzpicture}
+
+
+
+%------------ Positive real ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        $H(s)$ positive real iff
+        \begin{enumerate}
+            \item No poles with real part $> 0$
+            \item $H(s)$ real for all positive and real s
+            \item $\text{Re}[H(s)] \geq 0$ for all $\text{Re}[s] > 0$.
+        \end{enumerate}
+    \end{minipage}
+};
+%------------ Simple rotations header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Positive Real};
+\end{tikzpicture}
+
 \end{multicols*}
 \end{document}
 

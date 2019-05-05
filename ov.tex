@@ -88,8 +88,63 @@
         \end{enumerate}
     \end{minipage}
 };
-%------------ Simple rotations header ---------------------
 \node[fancytitle, right=10pt] at (box.north west) {Positive Real};
+\end{tikzpicture}
+
+
+%------------ Eulers formula ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \begin{align*}
+            e^{ix} = \cos(x) + i\sin(x)
+        \end{align*}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Euler's Formula};
+\end{tikzpicture}
+
+
+
+%------------ Hyperbolic trig ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \begin{align*}
+            \sinh(\sigma + j \omega) = \sinh \sigma \cos \omega + j \cosh \sigma \sin \omega \\
+            \cosh(\sigma + j \omega) = \cosh \sigma \cos \omega + j \sinh \sigma \sin \omega \\
+        \includegraphics[width=0.5\textwidth]{hyp.png}
+        \end{align*}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Hyperbolic Trig};
+\end{tikzpicture}
+
+
+%------------ Skew symmetric matrix ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \begin{align*}
+            \mathbf{a} = \begin{bmatrix}
+                a_1 \\
+                a_2 \\
+                a_3 
+            \end{bmatrix}
+            \iff
+            \mathbf{a}^\times = \begin{bmatrix}
+                0 & -a_3 & a_2 \\
+                a_3 & 0 & -a_1 \\
+                -a_2 & a_1 & 0
+            \end{bmatrix}
+        \end{align*}
+        \begin{itemize}
+            \item $u \times v$ corresponds to $\mathbf{u}^\times \mathbf{v}$
+            \item $(\mathbf a^\times)^\top = -(\mathbf a^\times)$
+        \end{itemize}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Skew Symmetric Matrix};
 \end{tikzpicture}
 
 \end{multicols*}

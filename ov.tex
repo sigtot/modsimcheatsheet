@@ -147,6 +147,50 @@
 \node[fancytitle, right=10pt] at (box.north west) {Skew Symmetric Matrix};
 \end{tikzpicture}
 
+
+%------------ Roll Pitch Yaw ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.5\textwidth]{rollpitchyaw.png}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Roll Pitch Yaw};
+\end{tikzpicture}
+
+
+%------------ Dot Product ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \begin{itemize}
+            \item $\vec v \cdot \vec u = |v||u|\cos\theta$
+            \item $\mathbf{v} \cdot \mathbf{u} = \mathbf{u}^\top \mathbf{v}$
+        \end{itemize}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Dot Product};
+\end{tikzpicture}
+
+
+
+%------------ Transpose ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \begin{enumerate}
+            \item $(\mathbf{A} + \mathbf{B})^\top = \mathbf{A}^\top + \mathbf{B}^\top$
+            \item $(\mathbf{AB})^\top = \mathbf{B}^\top \mathbf{A}^\top$
+            \item $(c\mathbf{A})^\top = c\mathbf{A}^\top$
+            \item $\det(\mathbf{A}^\top) = \det(\mathbf{A})$
+            \item $(\mathbf{A}^\top)^{-1} = (\mathbf{A}^{-1})^\top$
+        \end{enumerate}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Transpose};
+\end{tikzpicture}
+
 \end{multicols*}
 \end{document}
 

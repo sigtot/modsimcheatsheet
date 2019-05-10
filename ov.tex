@@ -191,6 +191,57 @@
 \node[fancytitle, right=10pt] at (box.north west) {Transpose};
 \end{tikzpicture}
 
+
+%------------ Stability Function ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \begin{itemize}
+            \item Explicit methods\\
+            $R(h\lambda) = \det \begin{bmatrix}
+                \mathbf I - \lambda h (\mathbf A - \mathbf{1 b}^\top)
+            \end{bmatrix}$
+            \item Other methods\\
+            $R(h \lambda) = \begin{bmatrix}
+                1 + \lambda h \mathbf b ^\top (\mathbf I - h \lambda \mathbf A)^{-1} 
+            \end{bmatrix}$\\
+            $ R(h \lambda) = \frac{
+                \det \begin{bmatrix}
+                    \mathbf I - \lambda h (\mathbf A - \mathbf 1 \mathbf b ^\top)
+                \end{bmatrix}
+            }
+            {
+                \det \begin{bmatrix}
+                    \mathbf I - \lambda h \mathbf A
+                \end{bmatrix}
+            }$
+        \end{itemize}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Stability Function};
+\end{tikzpicture}
+\\\\\\
+%------------ Matrix Inverse ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \begin{align*}
+            \begin{bmatrix}
+                a & b \\
+                c & d \\
+            \end{bmatrix}^{-1}
+            =
+            \frac{1}{ab - cd}
+            \begin{bmatrix}
+                d & -b \\
+                -c & a \\
+            \end{bmatrix}
+        \end{align*}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Matrix Inverse};
+\end{tikzpicture}
+
 \end{multicols*}
 \end{document}
 

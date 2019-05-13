@@ -203,7 +203,7 @@
             \end{bmatrix}$
             \item Other methods\\
             $R(h \lambda) = \begin{bmatrix}
-                1 + \lambda h \mathbf b ^\top (\mathbf I - h \lambda \mathbf A)^{-1} 
+                1 + \lambda h \mathbf b ^\top (\mathbf I - \lambda h \mathbf A)^{-1} \mathbf 1
             \end{bmatrix}$\\
             $ R(h \lambda) = \frac{
                 \det \begin{bmatrix}
@@ -221,6 +221,8 @@
 \node[fancytitle, right=10pt] at (box.north west) {Stability Function};
 \end{tikzpicture}
 \\\\\\
+
+
 %------------ Matrix Inverse ---------------
 \begin{tikzpicture}
 \node [mybox] (box){%
@@ -240,6 +242,62 @@
     \end{minipage}
 };
 \node[fancytitle, right=10pt] at (box.north west) {Matrix Inverse};
+\end{tikzpicture}
+
+
+%------------ Matrix Fun Facts ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \begin{itemize}
+            \item $\det(c\mathbf A) = c^n \det(\mathbf A)$
+            \item For 3-by-3 matrices,\\
+                $(\mathbf I + \mathbf A)$ and $(\mathbf I - \mathbf A)$
+            commute.
+        \end{itemize}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Matrix Fun Facts};
+\end{tikzpicture}
+
+
+%------------ Homogenous Transformation Matrix ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \begin{align*}
+        \mathbf T ^a_b = \begin{bmatrix}
+            \mathbf R ^ a _ b & \mathbf r ^ a _ {ab} \\
+            \mathbf 0 ^ \top & 1
+        \end{bmatrix}
+        \in SE(3)
+        \end{align*}
+        \begin{align*}
+        (\mathbf T ^a_b)^{-1} = \begin{bmatrix}
+            (\mathbf R^a_b)^\top & -(\mathbf R ^a_b)^\top \mathbf r^a_{ab} \\
+            \mathbf 0^\top & 1
+        \end{bmatrix}
+        = \begin{bmatrix}
+            \mathbf R ^b_a & \mathbf r ^a_{ba} \\
+            \mathbf 0 ^\top & 1
+        \end{bmatrix}
+        = \mathbf T^b_a
+        \end{align*}
+Note that the positon of the a-frame in the transformed frame (the b-frame) is
+$\mathbf r^a_{ba} = -(\mathbf R^a_b)^\top \mathbf r^a_{ab}$.
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Homogenous Transformation Matrix};
+\end{tikzpicture}
+
+%------------ A Fancy Integral ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        $\int^h_0 (1 - \frac{z}{h})^n P(z) dz = \frac{h}{n+1}(P(0) + \int ^h _0 (1 - \frac{z}{h})^{n+1} P'(z) dz)$
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {A Fancy Integral};
 \end{tikzpicture}
 
 \end{multicols*}
